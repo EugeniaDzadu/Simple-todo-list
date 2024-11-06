@@ -1,0 +1,131 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #00d0ff, #6c63ff);
+}
+
+#todo-app {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#todo-app:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+}
+
+#new-task {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#new-task:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+#add-task-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: #534dd1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888888;
+    background-color: #f0f0f0;
+}
+
+li:not(.completed):hover {
+    background-color: #f9f9f9;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #d12e2e;
+}
+
+/* Responsive styling */
+@media (max-width: 500px) {
+    #todo-app {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #new-task, #add-task-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
